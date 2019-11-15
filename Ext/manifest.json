@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "My Addon",
+    "version": "1.0",
+    "description": "Description here.",
+    "icons": {
+        "48": "icons/border-48.png"
+    },
+    "permissions": [
+        "*://www.youtube.com/*",
+        "webRequest",
+        "*://www.googleapis.com/*"
+      ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://www.youtube.com/*"
+            ],
+            "js": [
+                "jquery.js",
+                "distraction_detect.js"
+            ]
+        }
+    ]
+}
